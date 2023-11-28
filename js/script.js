@@ -25,10 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
         image.src = photoSrc;
         image.alt = `Foto ${i}`;
 
+        
         const button = document.createElement("button");
         button.classList.add("btn");
         button.classList.add("btn-primary");
-        button.textContent = "alalala"
+        button.classList.add("botao");
+        button.textContent = "Comprar!"
 
         const descDiv = document.createElement("div");
         descDiv.classList.add("description");

@@ -1,23 +1,24 @@
 /* Estilos para o layout da galeria */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
     gap: 20px;
-    padding: 20px;
     justify-content: space-between; /* Alinha as colunas */
-    max-width: 1200px;
-    padding-left: 200px;
-    padding-right: 200px;
+    
 }
-
+.botao{
+    margin-left: 80px;
+}
 .photo {
+    width: 250px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .photo img {
-    width: 200px;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -60,3 +61,5 @@
         font-size: 14px;
     }
 }
+
+
