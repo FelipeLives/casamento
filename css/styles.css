@@ -1,0 +1,62 @@
+/* Estilos para o layout da galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between; /* Alinha as colunas */
+    max-width: 1200px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.photo {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.description {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Define o salto para a próxima linha a cada 4 imagens */
+.photo:nth-child(4n+1) {
+    grid-column: 1; /* Coloca a imagem na primeira coluna */
+}
+
+.photo:nth-child(4n+2) {
+    grid-column: 2; /* Coloca a imagem na segunda coluna */
+}
+
+.photo:nth-child(4n+3) {
+    grid-column: 3; /* Coloca a imagem na terceira coluna */
+}
+
+.photo:nth-child(4n+4) {
+    grid-column: 4; /* Coloca a imagem na quarta coluna */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o número de colunas para telas menores */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .photo {
+        border-radius: 6px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
